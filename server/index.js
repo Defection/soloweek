@@ -14,10 +14,6 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser.json())
 
 
-app.get('/', (req,res)=>{
-  res.send(process.env.PORT)
-})
-
 app.post('/email', (req,res)=>{
   var data = req.body 
   console.log(data)

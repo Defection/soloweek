@@ -1,6 +1,5 @@
 import React from "react";
 import io from "socket.io-client";
-import axios from 'axios';
 
 class Chat extends React.Component{
     constructor(props){
@@ -9,13 +8,10 @@ class Chat extends React.Component{
         this.state = {
             username: '',
             message: '',
-            messages: [],
-            portNum: ''
+            messages: []
         };
-        const port = this.state.portNum 
-        console.log(port, 'this is the portenv num')
+        const port = process.env.PORT || 8080
         this.socket = io(`localhost:${port}`);
-
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);
@@ -36,13 +32,6 @@ class Chat extends React.Component{
             this.setState({message: ''});
 
         }
-    }
-
-    componentDidMount(){
-        axios.get('/')
-        .then((data)=>{
-            this.setState({portNum: data})
-        })
     }
 
 
