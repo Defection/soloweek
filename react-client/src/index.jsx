@@ -12,6 +12,7 @@ import Auth0Lock from 'auth0-lock'
 import ReactModal from 'react-modal'
 import Chat from "./components/Chat.jsx";
 import axios from 'axios';
+import data from "../js/resumeData.json"
 
 
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
     this.lock.on('authenticated', (authResult)=>{
       console.log(authResult)
     })
+     console.log(this.state.resumeData)
   }
 
   showLock(){
@@ -44,19 +46,22 @@ class App extends React.Component {
   }
 
   getResumeData(){
-    const port = process.env.PORT || 8080
-    $.ajax({
-      url:`http://localhost:${port}/resumeData.json`,
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
+    // const port = process.env.PORT || 8080
+    // $.ajax({
+    //   url:`http://localhost:${port}/resumeData.json`,
+    //   dataType:'json',
+    //   cache: false,
+    //   success: function(data){
+    //     this.setState({resumeData: data});
+    //   }.bind(this),
+    //   error: function(xhr, status, err){
+    //     console.log(err);
+    //     alert(err);
+    //   }
+    // });
+
+    this.setState({resumeData: data})
+
   }
 
   sendEmail(emailData){
