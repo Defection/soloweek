@@ -46,7 +46,7 @@ app.post('/email', (req,res)=>{
 
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT
 
 var server = app.listen(port, function() {
   console.log(`listening on port ${port}!`);
@@ -62,4 +62,6 @@ io.on('connection', (socket) => {
     })
 });
 
+let Port = port
+export default window.Port
 // https://api.elasticemail.com/v2/email/send?apikey=11247b43-8015-4e70-b075-4327381d0e0f&subject=TestingAPI&from=eshum89@gmail.com&to=eshum89@gmail.com&bodyText=helloworldhellworld&isTransactional=true
