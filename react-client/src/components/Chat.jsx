@@ -10,7 +10,8 @@ class Chat extends React.Component{
             message: '',
             messages: []
         };
-        const port = process.env.PORT || 8080
+        const port = process.env.PORT
+        console.log(port)
         this.socket = io(`localhost:${port}`);
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
