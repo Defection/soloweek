@@ -44,8 +44,9 @@ class App extends React.Component {
   }
 
   getResumeData(){
+    const port = process.env.PORT || 8080
     $.ajax({
-      url:'http://localhost:8080/resumeData.json',
+      url:`http://localhost:${port}/resumeData.json`,
       dataType:'json',
       cache: false,
       success: function(data){
