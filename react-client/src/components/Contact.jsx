@@ -16,6 +16,13 @@ class Contact extends Component {
   getEmailInfo(){
     console.log(this.state)
     this.props.sendEmail(this.state)
+    this.setState({
+        name: '',
+        email: '',
+        subject: [],
+        message: ''
+    })
+
   }
 
   render() {
@@ -52,26 +59,26 @@ class Contact extends Component {
 
                   <div>
       						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-      						   <input onChange= {(e)=>{this.setState({name:e.target.value})}}type="text"  size="35" id="contactName" name="contactName"/>
+      						   <input value = {this.state.name} onChange= {(e)=>{this.setState({name:e.target.value})}}type="text"  size="35" id="contactName" name="contactName"/>
                   </div>
 
                   <div>
       						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-      						   <input onChange= {(e)=>{this.setState({email:e.target.value})}} type="text"  size="35" id="contactEmail" name="contactEmail"/>
+      						   <input value = {this.state.email} onChange= {(e)=>{this.setState({email:e.target.value})}} type="text"  size="35" id="contactEmail" name="contactEmail"/>
                   </div>
 
                   <div>
       						   <label htmlFor="contactSubject">Subject</label>
-      						   <input onChange= {(e)=>{this.setState({subject:e.target.value})}} type="text"  size="35" id="contactSubject" name="contactSubject"/>
+      						   <input value = {this.state.subject} onChange= {(e)=>{this.setState({subject:e.target.value})}} type="text"  size="35" id="contactSubject" name="contactSubject"/>
                   </div>
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea onChange= {(e)=>{this.setState({message:e.target.value})}} cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea value = {this.state.message} onChange= {(e)=>{this.setState({message:e.target.value})}} cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
                   </div>
 
                   <div>
-                     <button onClick = {()=>{this.getEmailInfo()}} className="submit">Submit</button>
+                     <button onClick = {()=>{this.getEmailInfo()}}  className="submit">Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>

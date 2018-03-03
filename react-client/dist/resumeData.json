@@ -133,12 +133,12 @@
         "modal":"#modal-03"
       },
       {
-        "title":"Into The Light",
-        "description":"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
-        "category":"Photography",
-        "tags":"Photography, Design",
+        "title":"My Portfolio Website",
+        "description":"A personal website I made during my time at Hack Reactor.",
+        "category":"Personal Web Development",
+        "tags":"Web Development",
         "image":"portfolio.jpg",
-        "url":"http://port4.com",
+        "url":"",
         "modal":"#modal-04"
       }
     ]

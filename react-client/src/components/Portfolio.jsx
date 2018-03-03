@@ -9,7 +9,7 @@ class Portfolio extends Component {
         return <div key = {i} className="columns portfolio-item">
            <div className="item-wrap">
               <a href={project.modal} onClick ={()=> {project.modal}} title="">
-                 <img alt="" src={imageUrl} onClick ={()=> {console.log(project)}} className="thumb-link" title="The Beetle Car" data-size="1050x700"/>
+                 <img alt="" src={imageUrl} onClick ={()=> {console.log(project)}} className="thumb-link"  data-size="1050x700"/>
                  <div className="overlay">
                     <div className="portfolio-item-meta">
                    <h5>{project.title}</h5>
@@ -27,7 +27,7 @@ class Portfolio extends Component {
       <section id="portfolio">
       <div className="row">
          <div className="twelve columns collapsed">
-            <h1>Check Out Some of My Works.</h1>
+            <h1>Check Out My Portfilio.</h1>
             <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
           	   {portfolio}
             </div>

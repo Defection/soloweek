@@ -19,7 +19,6 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      foo: 'bar',
       resumeData:{}
     }
     this.getResumeData = this.getResumeData.bind(this)
@@ -62,7 +61,7 @@ class App extends React.Component {
     // });
 
     this.setState({resumeData: {
-  "main": {
+    "main": {
     "name":"Eric Shum",
     "occupation":"Web developer, Programmer and Avid YouTube/Anime watcher.",
     "description":"I make web applicatications and spend most of the day coding. I am a student of StackOverflow.",
@@ -175,7 +174,7 @@ class App extends React.Component {
         "tags":"YouTube",
         "image":"recast.jpg",
         "url":"",
-        "modal":"#modal-01"
+        "modal":""
       },
       {
         "title":"KarWorTong",
@@ -184,7 +183,7 @@ class App extends React.Component {
         "tags":"Branding, Web Development",
         "image":"karwortong.jpg",
         "url":"",
-        "modal":"#modal-02"
+        "modal":""
       },
       {
         "title":"WeatherApp",
@@ -193,16 +192,16 @@ class App extends React.Component {
         "tags":"Web Programming",
         "image":"weatherapp.jpg",
         "url":"",
-        "modal":"#modal-03"
+        "modal":""
       },
       {
-        "title":"Into The Light",
-        "description":"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
-        "category":"Photography",
-        "tags":"Photography, Design",
+        "title":"My Portfolio Website",
+        "description":"A personal website I made during my time at Hack Reactor.",
+        "category":"Personal Web Development",
+        "tags":"Web Development",
         "image":"portfolio.jpg",
-        "url":"http://port4.com",
-        "modal":"#modal-04"
+        "url":"",
+        "modal":""
       }
     ]
   },
@@ -219,6 +218,7 @@ class App extends React.Component {
     ]
   }
 }
+
 })
 
   }
@@ -226,6 +226,8 @@ class App extends React.Component {
   sendEmail(emailData){
 
     axios.post('/email', emailData)
+
+
 
   }
   render() {
