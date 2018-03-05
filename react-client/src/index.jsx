@@ -156,7 +156,7 @@ class App extends React.Component {
         "level":"80%"
       },
       {
-        "name":"Excel",
+        "name":"nodeJs",
         "level":"80%"
       },
       {

@@ -36,34 +36,36 @@ class Chat extends React.Component{
 
 
     render(){
-        return (
-            <div  className="card" >
-                <div className="row">
-                    <div className="col-4">
-                            <div style ={{position: 'relative', marginLeft: '72%', bottom: '750px', marginBottom: 0, backgroundColor: 'white', borderRadius: '7%'}} className="card">
-                                <div style= {{textAlign: 'center', fontWeight: '200'}} className="header">Chat Box</div>
-                                <hr/>
-                                <div style= {{marginLeft: '5%'}} className="messages">
-                                    {this.state.messages.map(message => {
-                                        return (
-                                            <div>{message.author}: {message.message}</div>
-                                        )
-                                    })}
 
-                                </div>
-                                <div className="footer">
-                                    <input style= {{position: 'relative', marginLeft: '5%', top: '70px'}} type="text" placeholder="Username" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
-                                    <br/>
-                                    <input style= {{position: 'relative', marginLeft: '5%', top: '35px'}} type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
-                                    <br/>
-                                    <button style= {{marginLeft: '60%'}} onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
-                                </div>
+        return (
+            <div className="card"  >
+                <div className="row" >
+                    <div className="col-4">
+                        <div style ={{position: 'relative', marginLeft: '72%', bottom: '750px', marginBottom: 0, backgroundColor: 'white', borderRadius: '7%'}} className="card">
+                            <div style= {{textAlign: 'center', fontWeight: '200'}} className="header">Chat Box</div>
+                            <hr/>
+                            <div style= {{marginLeft: '5%', maxHeight: '100px', overflow: 'auto',}} className="messages">
+                                {this.state.messages.map(message => {
+                                    return (
+                                        <div>{message.author}: {message.message}</div>
+                                    )
+                                })}
+
                             </div>
+                            <div className="footer">
+                                <input style= {{position: 'relative', marginLeft: '5%', top: '70px'}} type="text" placeholder="Username" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
+                                <br/>
+                                <input style= {{position: 'relative', marginLeft: '5%', top: '35px'}} type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
+                                <br/>
+                                <button style= {{marginLeft: '60%'}} onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         );
     }
+        
 }
 
 export default Chat;
