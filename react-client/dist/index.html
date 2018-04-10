@@ -8,66 +8,13 @@
 	  <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/media-queries.css">
     <link rel="stylesheet" href="/css/magnific-popup.css">
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-
-    <!-- Firechat -->
-    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
-    <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
-        <style>
-      #firechat-wrapper {
-        height: 475px;
-        max-width: 325px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        margin: 50px auto;
-        text-align: center;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 5px 25px #666;
-        -moz-box-shadow: 0 5px 25px #666;
-        box-shadow: 0 5px 25px #666;
-      }
-    </style>
     <title>PortfolioViewer</title>
   </head>
   <body>
     <div id="app"></div>
     <div id="firechat-wrapper"></div>
     <script type="text/javascript">
-      // Initialize Firebase SDK
-      var config = {
-          apiKey: "AIzaSyCT4A-uJG7oi1e0F7oWythlVCkV5IAQ64M",
-          authDomain: "solo-week-project.firebaseapp.com",
-          databaseURL: "https://solo-week-project.firebaseio.com",
-          projectId: "solo-week-project",
-          storageBucket: "solo-week-project.appspot.com",
-          messagingSenderId: "533940891555"
-      };
-      firebase.initializeApp(config);
-      // Get a reference to the Firebase Realtime Database
-      var chatRef = firebase.database().ref();
-      // Create an instance of Firechat
-      var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
-      // Listen for authentication state changes
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // If the user is logged in, set them as the Firechat user
-          chat.setUser(user.uid, "Anonymous" + user.uid.substr(10, 8));
-        } else {
-          // If the user is not logged in, sign them in anonymously
-          firebase.auth().signInAnonymously().catch(function(error) {
-            console.log("Error signing user in anonymously:", error);
-          });
-        }
-      });
     </script>
-   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
    <script type="text/javascript" src="bundle.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>

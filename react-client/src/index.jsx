@@ -28,16 +28,16 @@ class App extends React.Component {
 
   componentDidMount(){
     this.getResumeData();
-    this.showLock()
+    // this.showLock()
   }
 
   componentWillMount(){
-    this.lock = new Auth0Lock('7tyKiZ60tr89LriUyIv163BdAnsPbg1k','hr-solo-week.auth0.com');
+    // this.lock = new Auth0Lock('7tyKiZ60tr89LriUyIv163BdAnsPbg1k','hr-solo-week.auth0.com');
 
-    this.lock.on('authenticated', (authResult)=>{
-      console.log(authResult)
-    })
-     console.log(this.state.resumeData)
+    // this.lock.on('authenticated', (authResult)=>{
+    //   console.log(authResult)
+    // })
+    //  console.log(this.state.resumeData)
   }
 
   showLock(){
@@ -63,15 +63,15 @@ class App extends React.Component {
     this.setState({resumeData: {
     "main": {
     "name":"Eric Shum",
-    "occupation":"Web developer, Programmer and Avid YouTube/Anime watcher.",
-    "description":"I make web applicatications and spend most of the day coding. I am a student of StackOverflow.",
+    "occupation":"FullStack Web developer, with a focus on React and JavaScript.",
+    "description":"Projects I have built contain serveral techonologies not limited to NodeJS, Express, MySQL, MongoDB, Angular, and Git.",
     "image":"profilepic.jpg",
     "bio":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
     "email": "eshum89@gmail.com",
     "phone": "347-421-2740",
     "address":{
       "street":"33-19 145th Pl",
-      "city":"Flushing",
+      "city":"New York",
       "state":"NY",
       "zip": "11354"
     },
@@ -112,17 +112,18 @@ class App extends React.Component {
   "resume":{
     "education":[
       {
-        "school":"Queens College, City University of New York",
-        "degree":"Bachelors in Accounting/Economics",
-        "graduated":"January 2013",
-        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium."
+        "school":"Hack Reactor",
+        "degree":"Advanced Software Engineering Immersive Program  ",
+        "graduated":"2018",
+        // "description":"This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat"
       },
       {
-        "school":"Hack Reactor",
-        "degree":"You're Looking At It? A Hoodie, T-shirt, and Sticker",
-        "graduated":"Currently Praying That I Make It To Graduation",
-        "description":"This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat"
-      }
+        "school":"Queens College, City University of New York",
+        "degree":"Bachelors in Accounting",
+        "graduated":"2013",
+        // "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium."
+      },
+      
     ],
     "work":[
       {
@@ -141,27 +142,27 @@ class App extends React.Component {
     "skills":[
       {
         "name":"JavaScript",
-        "level":"80%"
+        "level":"90%"
       },
       {
         "name":"React",
-        "level":"75%"
+        "level":"85%"
       },
       {
-        "name":"HTML5",
-        "level":"70%"
-      },
-      {
-        "name":"CSS",
+        "name":"MySQL",
         "level":"80%"
       },
       {
-        "name":"nodeJs",
+        "name":"MongoDB",
         "level":"80%"
       },
       {
-        "name":"jQuery",
-        "level":"70%"
+        "name":"NodeJs",
+        "level":"85%"
+      },
+      {
+        "name":"Git",
+        "level":"80%"
       }
     ]
   },
@@ -239,7 +240,6 @@ class App extends React.Component {
         <Portfolio data={this.state.resumeData.portfolio} />
         <Testimonials data={this.state.resumeData.testimonials} />
         <Contact data={this.state.resumeData.main} sendEmail={this.sendEmail}/>
-        <Footer />
         <Chat/>
       </div>
     );

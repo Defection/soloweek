@@ -65,7 +65,7 @@ class Resume extends Component {
             voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
             voluptatem sequi nesciunt.
             </p>
-				<div className="bars">
+				<div className="bars" >
 				   <ul className="skills">
 					  {skills}
 					</ul>
