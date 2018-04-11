@@ -15,14 +15,17 @@ class Resume extends Component {
         </div>
       });
 
-      var work = this.props.data.work.map(function(job){
+      var projects = this.props.data.projects.map(function(job){
         return <div key={job.company} className="row item">
            <div className="twelve columns">
-              <h3>{job.company}</h3>
+              <h3>{job.company}<span></span> <h4><em>{job.description}</em></h4></h3>
               <p className="info">{job.title}<span>&bull;</span> <em className="date">{job.years}</em></p>
 
               <p>
-              {job.description}
+              {job.description1}<br></br>
+              {job.description2}<br></br>
+              {job.description3}<br></br>
+              {job.description4}<br></br>
               </p>
            </div>
         </div>
@@ -47,11 +50,11 @@ class Resume extends Component {
 
       <div className="row work">
          <div className="three columns header-col">
-            <h1><span>Work</span></h1>
+            <h1><span>Projects</span></h1>
          </div>
 
          <div className="nine columns main-col">
-          {work}
+          {projects}
          </div>
       </div>
 
@@ -60,11 +63,9 @@ class Resume extends Component {
             <h1><span>Skills</span></h1>
          </div>
          <div className="nine columns main-col">
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.
+            <p>
             </p>
+            <br></br>
 				<div className="bars" >
 				   <ul className="skills">
 					  {skills}

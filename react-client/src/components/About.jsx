@@ -29,16 +29,16 @@ class About extends Component {
                   <h2>Contact Details</h2>
                   <p className="address">
 						   <span>{name}</span><br />
-						   <span>{street}<br />
+{/*						   <span>{street}<br />
 						         {city}, {state} {zip}
-                     </span><br />
+                     </span><br />*/}
 						   <span>{phone}</span><br />
                      <span>{email}</span>
 					   </p>
                </div>
                <div className="columns download">
                   <p>
-                     <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                     <a href="https://drive.google.com/open?id=1e4Dabt7MEQd6ed2ga0gXxO8_5SIJdC7H" className="button"><i className="fa fa-download"></i>Download Resume</a>
                   </p>
                </div>
             </div>

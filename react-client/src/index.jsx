@@ -66,7 +66,7 @@ class App extends React.Component {
     "occupation":"FullStack Web developer, with a focus on React and JavaScript.",
     "description":"Projects I have built contain serveral techonologies not limited to NodeJS, Express, MySQL, MongoDB, Angular, and Git.",
     "image":"profilepic.jpg",
-    "bio":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    "bio":"I’m an ambitious, and autonomous person who has a profound love for solving problems and developing web applications as a full stack software engineer using JavaScript, ReactJS, NodeJS with Express, MySQL, and MongoDB. Before I got into coding, I worked years in the accounting field until I decided to take a leap of faith in changing industries. Within half a year, I've learned a great amount autonomously and much more from my days at Hack Reactor. If you would like to see some of my projects, please Download my resume or view my Github for more information. ",
     "email": "eshum89@gmail.com",
     "phone": "347-421-2740",
     "address":{
@@ -125,19 +125,37 @@ class App extends React.Component {
       },
       
     ],
-    "work":[
+    "projects":[
       {
-        "company":"DMA International",
-        "title":"Administrative Assitant/Free TechSupport",
-        "years":"January 2015 - October 2017",
-        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium."
+        "company":"Carrier",
+        "description": "A customizable email newsletter client with campaign managing and stats",
+        "title":"Fullstack Software Engineer",
+        "years":"2018",
+        "description1":"● Implemented an email template client with Unlayer that allows users to design and se newsletters up to 100 recipients a day for free via Sendgrid’s API",
+        "description2":"● Used React and Grommet.io to style the entire application for a faster and better user experience",
+        "description3":"● Implemented email statistics tracking and unsubscribe with Node.JS",
+        "description4":"● Used C3 to visualize email statistics data to the end user.",
       },
       {
-        "company":"IRS, U.S Dept of Treasury",
-        "title":"Tax Examiner/Data Transcriber",
-        "years":"December 2015 - May 2016",
-        "description":"This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat"
-      }
+        "company":"Kindly",
+        "description": "A platform for users to donate unwanted goods and verified organizations to claim donations",
+        "title":"Fullstack Software Engineer",
+        "years":"2018",
+        "description1":"● I​mplemented a two factor verification system to filter by tier of user",
+        "description2":"● Constructed multi scope user interface with React, giving Users and Organizations different application functionality",
+        "description3":"● Used NodeJS/MySQL to handle routing, storing of user information, and Elastic Emai for real time notification via email at no cost",
+        "description4":"● Set up Google Maps Location and Marker functionality via React modules to pin all donation claim locations",
+      },
+      {
+        "company":"My Portfolio Website(this)",
+        "description": "A personal website that has my portfolio and resume info",
+        "title":"Fullstack Software Engineer",
+        "years":"2018",
+        "description1":"● Showcased my portfolio, resume data, and a way to contact me with React",
+        "description2":"● Implemented an email contact form using Axios/NodeJS/Express/ instead of the traditional mailto method or PHP",
+        "description3":"● Implemented backup email storage by inserting submitted form data into MongoDB database",
+        "description4":"● Supplemented the site with real-time Socket.io chat",
+      },
     ],
     "skills":[
       {
@@ -240,7 +258,7 @@ class App extends React.Component {
         <Portfolio data={this.state.resumeData.portfolio} />
         <Testimonials data={this.state.resumeData.testimonials} />
         <Contact data={this.state.resumeData.main} sendEmail={this.sendEmail}/>
-        <Chat/>
+       <Footer/>
       </div>
     );
   }
