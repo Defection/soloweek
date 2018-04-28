@@ -187,31 +187,28 @@ class App extends React.Component {
   "portfolio":{
     "projects": [
       {
-        "title":"Re-Cast",
-        "description":"YouTube made with React. Uses YouTube API for a blazing fast experience.",
-        "category":"YouTube VideoPlayer, Web Development",
+        "title":"Kindly",
+        "description":"A platform for users to donate unwanted goods and verified organizations to claim donations.",
+        "category":"A platform for users to donate unwanted goods and verified organizations to claim donations.",
         "tags":"YouTube",
-        "image":"recast.jpg",
-        "url":"",
-        "modal":""
+        "image":"kindly2.png",
+        "url":"https://kindly-jonson.herokuapp.com/"
       },
       {
         "title":"KarWorTong",
         "description":"An Info Page for a Small Business I used to work for.",
-        "category":"Web Design",
+        "category":"An Info Page for a Small Business I used to work for.",
         "tags":"Branding, Web Development",
         "image":"karwortong.jpg",
-        "url":"",
-        "modal":""
+        "url":"http://www.karwortong.com",
       },
       {
-        "title":"WeatherApp",
+        "title":"Carrier",
         "description":"A MVP Project done as a student at Hack Reactor.",
-        "category":"Web Development",
+        "category":"A customizable email newsletter client with campaign managing and stats",
         "tags":"Web Programming",
-        "image":"weatherapp.jpg",
-        "url":"",
-        "modal":""
+        "image":"carrier2.png",
+        "url":"http://ec2-54-227-125-175.compute-1.amazonaws.com:8080/",
       },
       {
         "title":"My Portfolio Website",
@@ -219,8 +216,7 @@ class App extends React.Component {
         "category":"Personal Web Development",
         "tags":"Web Development",
         "image":"portfolio.jpg",
-        "url":"",
-        "modal":""
+        "url":""
       }
     ]
   },

@@ -43,9 +43,8 @@ class Contact extends Component {
             </div>
 
             <div className="ten columns">
-                  <p className="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                  eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                  <p className="lead"> If you like what you see and would like to contact me with any questions or job opportunities, 
+              please shoot me an email via the form below or send me a text.
                   </p>
 
             </div>
@@ -95,11 +94,10 @@ class Contact extends Component {
             </div>
             <aside className="four columns footer-widgets">
                <div className="widget widget_contact">
-    					   <h4>Address and Phone</h4>
+    					   <h4>Contact Me</h4>
     					   <p className="address">
     						   {name}<br />
-    						   {street} <br />
-    						   {city}, {state} {zip}<br />
+    						   eshum89@gmail.com <br />
     						   <span>{phone}</span>
     					   </p>
 				      </div>
